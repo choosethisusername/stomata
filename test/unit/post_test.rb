@@ -8,4 +8,11 @@ class PostTest < ActiveSupport::TestCase
     assert_equal 'trivial', p.content
   end
   
+  test "create another post" do
+    p = Post.create(:content => 'trivial', :title => "foo")
+    assert_equal 1, Post.count
+    assert_equal 'trivial', p.content
+  end
+  
+  
 end
