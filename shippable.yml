@@ -1,0 +1,10 @@
+language: ruby
+ruby:
+ - 1.9.3-p392
+ 
+before_install:
+ - bundle install
+ - bundle exec rake db:create db:migrate db:test:prepare
+ 
+script:
+ - bundle exec rake test
