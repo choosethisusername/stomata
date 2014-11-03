@@ -1,5 +1,5 @@
 language: ruby
 rvm:
- - 1.9.1
+ - 1.9.3
 before_script: travis_wait for i in {1..10}; do echo $i; sleep 1; done
 script: travis_wait cat
