@@ -5,6 +5,6 @@ services:
   - postgres:9.3
 cache: vendor/bundle
 commands:
-  - bundle --jobs=2 --deployment
+  - bundle --jobs=2
   - bundle exec rake db:create db:migrate
   - bundle exec rspec
