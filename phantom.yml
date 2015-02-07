@@ -1,0 +1,10 @@
+language: ruby:2.1.5
+env:
+  - RAILS_ENV=test
+services:
+  - postgres:9.3
+cache: vendor/bundle
+commands:
+  - bundle --jobs=2 --deployment
+  - bundle exec rake db:create db:migrate
+  - bundle exec rspec
