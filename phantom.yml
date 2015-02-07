@@ -7,4 +7,4 @@ cache: vendor/bundle
 commands:
   - bundle --jobs=2
   - bundle exec rake db:create db:migrate
-  - bundle exec rspec
+  - bundle exec rake
