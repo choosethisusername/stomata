@@ -1,0 +1,20 @@
+# circle.yml
+machine:
+  ruby:
+    version: 1.9.3
+  services:
+    - docker
+
+dependencies:
+  pre:
+    - bundle install
+    - docker version
+    - docker info
+    - lxc-create --version
+    - uname -a
+    - cat /etc/*release
+    - sudo apt-get update
+
+test:
+  post:
+    - docker run hello-world
