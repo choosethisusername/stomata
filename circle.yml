@@ -18,3 +18,5 @@ dependencies:
 test:
   post:
     - docker run hello-world
+    - docker pull busybox
+    - docker pull ubuntu
